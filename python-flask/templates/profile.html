@@ -1,0 +1,29 @@
+{% block title %}
+<title>Hello World, and your profile</title>
+{% endblock %}
+
+
+{% block body %}
+<div>
+    <h2>Hello world, and your user profile</h2>
+    <div>
+      <div>
+        <p>Name: {{ id['name'] }}</p>
+      </div>
+      <div>
+        <p>Email: {{ id['email'] }}</p>
+      </div>
+      <div>
+        <p>Full ID token:</p>
+        <pre>
+          {{ id|tojson(indent=2)}}
+        </pre>
+      </div>
+      <br/>
+
+    
+  </div>
+
+  Click here to <a href="/logout">logout</a> again.
+</div>
+{% endblock %}
